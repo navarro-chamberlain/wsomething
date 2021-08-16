@@ -1,0 +1,355 @@
+{"level":"info","ts":1628697659.6517413,"caller":"app/server.go:269","msg":"Server is initializing...","go_version":"go1.15.5"}
+{"level":"info","ts":1628697659.6519325,"caller":"app/web_hub.go:93","msg":"Starting websocket hubs","number_of_hubs":8}
+{"level":"debug","ts":1628697659.652091,"caller":"app/web_hub.go:410","msg":"Hub is starting","index":0}
+{"level":"debug","ts":1628697659.6520915,"caller":"app/web_hub.go:410","msg":"Hub is starting","index":1}
+{"level":"debug","ts":1628697659.6521132,"caller":"app/web_hub.go:410","msg":"Hub is starting","index":2}
+{"level":"debug","ts":1628697659.6522007,"caller":"app/web_hub.go:410","msg":"Hub is starting","index":3}
+{"level":"debug","ts":1628697659.6522257,"caller":"app/web_hub.go:410","msg":"Hub is starting","index":7}
+{"level":"debug","ts":1628697659.6522734,"caller":"app/web_hub.go:410","msg":"Hub is starting","index":4}
+{"level":"debug","ts":1628697659.6521578,"caller":"app/web_hub.go:410","msg":"Hub is starting","index":5}
+{"level":"debug","ts":1628697659.6521852,"caller":"app/web_hub.go:410","msg":"Hub is starting","index":6}
+{"level":"info","ts":1628697659.6529975,"caller":"i18n/i18n.go:93","msg":"Loaded system translations","for locale":"en","from locale":"/mattermost/i18n/en.json"}
+{"level":"debug","ts":1628697659.6537879,"caller":"app/enterprise.go:224","msg":"Loading SAML2 library"}
+{"level":"error","ts":1628697659.6638548,"caller":"app/enterprise.go:227","msg":"An error occurred while configuring SAML Service Provider","error":"Cannot load CertificateStore. No certificate block found"}
+{"level":"info","ts":1628697659.6682575,"caller":"sqlstore/store.go:306","msg":"Pinging SQL","database":"master"}
+{"level":"info","ts":1628697659.6851912,"caller":"sqlstore/store.go:306","msg":"Pinging SQL","database":"migrations"}
+{"level":"debug","ts":1628697660.143,"caller":"sqlstore/preference_store.go:41","msg":"Deleting any unused pre-release features"}
+{"level":"info","ts":1628697660.1669056,"caller":"app/license.go:94","msg":"License key valid unlocking enterprise features."}
+{"level":"debug","ts":1628697660.1831686,"caller":"jobs/schedulers.go:41","msg":"Initialising schedulers."}
+{"level":"info","ts":1628697660.183675,"caller":"cluster/cluster.go:160","msg":"A node has joined the cluster","node":"chat-7dc456cd9c-kvnrh"}
+{"level":"info","ts":1628697660.1837237,"caller":"cluster/cluster.go:124","msg":"New leader node in the cluster","new_leader_node":"iy8ayoos53rpu8qruyzwat4a5y"}
+{"level":"info","ts":1628697660.1837392,"caller":"mlog/log.go:237","msg":"Cluster leader changed. Invoking ClusterLeaderChanged listeners."}
+{"level":"info","ts":1628697660.1838071,"caller":"cluster/cluster.go:328","msg":"Cluster node self reporting","name":"chat-7dc456cd9c-kvnrh","address":"xxx.xxx.xxx.xxx","id":"iy8ayoos53rpu8qruyzwat4a5y"}
+{"level":"info","ts":1628697660.1838167,"caller":"app/server.go:470","msg":"Cluster leader changed. Determining if job schedulers should be running:","isLeader":true}
+{"level":"info","ts":1628697660.1838288,"caller":"cluster/cluster.go:329","msg":"Cluster listener for gossip has started","port":8074}
+{"level":"debug","ts":1628697660.1918404,"caller":"app/cluster_discovery.go:58","msg":"ClusterDiscoveryService ping writer started","ClusterDiscovery":"{\"id\":\"juzx8ad9pprsfkzeukbf76jh3e\",\"type\":\"mattermost_app\",\"cluster_name\":\"production\",\"hostname\":\"xxx.xxx.xxx.xxx\",\"gossip_port\":8074,\"port\":8075,\"create_at\":1628697660188,\"last_ping_at\":1628697660188}"}
+{"level":"debug","ts":1628697660.1918778,"caller":"cluster/cluster.go:351","msg":"ClusterInterfaceImpl.startJoiner started","discovery_data":"{\"id\":\"juzx8ad9pprsfkzeukbf76jh3e\",\"type\":\"mattermost_app\",\"cluster_name\":\"production\",\"hostname\":\"xxx.xxx.xxx.xxx\",\"gossip_port\":8074,\"port\":8075,\"create_at\":1628697660188,\"last_ping_at\":1628697660188}"}
+{"level":"error","ts":1628697660.2094784,"caller":"app/server.go:527","msg":"Mail server connection test is failed","error":"unable to connect: unable to connect to the SMTP server: dial tcp 127.0.0.1:10025: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:10025: connect: connection refused\nunable to connect to the SMTP server\ngithub.com/mattermost/mattermost-server/v5/shared/mail.ConnectToSMTPServerAdvanced\n\tgithub.com/mattermost/mattermost-server/v5/shared/mail/mail.go:142\ngithub.com/mattermost/mattermost-server/v5/shared/mail.ConnectToSMTPServer\n\tgithub.com/mattermost/mattermost-server/v5/shared/mail/mail.go:150\ngithub.com/mattermost/mattermost-server/v5/shared/mail.TestConnection\n\tgithub.com/mattermost/mattermost-server/v5/shared/mail/mail.go:215\ngithub.com/mattermost/mattermost-server/v5/app.NewServer\n\tgithub.com/mattermost/mattermost-server/v5/app/server.go:526\ngithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands.runServer\n\tgithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands/server.go:75\ngithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands.serverCmdF\n\tgithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands/server.go:59\ngithub.com/spf13/cobra.(*Command).execute\n\tgithub.com/spf13/cobra@v1.1.3/command.go:852\ngithub.com/spf13/cobra.(*Command).ExecuteC\n\tgithub.com/spf13/cobra@v1.1.3/command.go:960\ngithub.com/spf13/cobra.(*Command).Execute\n\tgithub.com/spf13/cobra@v1.1.3/command.go:897\ngithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands.Run\n\tgithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands/root.go:14\nmain.main\n\tgithub.com/mattermost/mattermost-server/v5/cmd/mattermost/main.go:31\nruntime.main\n\truntime/proc.go:204\nruntime.goexit\n\truntime/asm_amd64.s:1374\nunable to connect\ngithub.com/mattermost/mattermost-server/v5/shared/mail.TestConnection\n\tgithub.com/mattermost/mattermost-server/v5/shared/mail/mail.go:217\ngithub.com/mattermost/mattermost-server/v5/app.NewServer\n\tgithub.com/mattermost/mattermost-server/v5/app/server.go:526\ngithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands.runServer\n\tgithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands/server.go:75\ngithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands.serverCmdF\n\tgithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands/server.go:59\ngithub.com/spf13/cobra.(*Command).execute\n\tgithub.com/spf13/cobra@v1.1.3/command.go:852\ngithub.com/spf13/cobra.(*Command).ExecuteC\n\tgithub.com/spf13/cobra@v1.1.3/command.go:960\ngithub.com/spf13/cobra.(*Command).Execute\n\tgithub.com/spf13/cobra@v1.1.3/command.go:897\ngithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands.Run\n\tgithub.com/mattermost/mattermost-server/v5/cmd/mattermost/commands/root.go:14\nmain.main\n\tgithub.com/mattermost/mattermost-server/v5/cmd/mattermost/main.go:31\nruntime.main\n\truntime/proc.go:204\nruntime.goexit\n\truntime/asm_amd64.s:1374"}
+---------START-HTTP---------
+HEAD / HTTP/1.1
+Host: (redacted)
+User-Agent: MinIO (linux; amd64) minio-go/v7.0.10
+Authorization: AWS4-HMAC-SHA256 Credential=**REDACTED**/20210811/us-gov-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=**REDACTED**
+X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+X-Amz-Date: 20210811T160100Z
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/xml
+Date: Wed, 11 Aug 2021 16:01:01 GMT
+Server: AmazonS3
+X-Amz-Access-Point-Alias: false
+X-Amz-Bucket-Region: us-gov-west-1
+{"level":"debug","ts":1628697660.2811377,"caller":"filestore/s3store.go:178","msg":"Connection to S3 or minio is good. Bucket exists."}
+{"level":"info","ts":1628697660.2811868,"caller":"app/server.go:570","msg":"Current version is 5.37.0 (5.37.0/Tue Jul 13 19:39:17 UTC 2021/f46b068ecf3b20a0d6e529618813e0ef6b85ed72/5f5945751df929314967e539b5399598611996b7)","current_version":"5.37.0","build_number":"5.37.0","build_date":"Tue Jul 13 19:39:17 UTC 2021","build_hash":"f46b068ecf3b20a0d6e529618813e0ef6b85ed72","build_hash_enterprise":"5f5945751df929314967e539b5399598611996b7"}
+{"level":"info","ts":1628697660.281228,"caller":"app/server.go:579","msg":"Enterprise Build","enterprise_build":true}
+X-Amz-Id-2: +LcRAAUyAUZxdpbyXZDL1h+3c+CU1X/g21WMLuy9pENbK1oQcM9LXhAUKxZW+AkFeWYxlzZzg6o=
+X-Amz-Request-Id: N63QY06H8EE7KFN9
+---------END-HTTP---------
+{"level":"info","ts":1628697660.2812681,"caller":"app/server.go:585","msg":"Printing current working","directory":"/mattermost"}
+{"level":"info","ts":1628697660.2812924,"caller":"app/server.go:586","msg":"Loaded config","source":"postgres://(redacted)/sandboxmattermost?sslmode=disable&connect_timeout=10"}
+{"level":"debug","ts":1628697660.2926478,"caller":"app/server.go:946","msg":"Advanced logging metrics enabled"}
+{"level":"info","ts":1628697660.296236,"caller":"metrics/metrics.go:885","msg":"Metrics endpoint is initiated","address":":8067"}
+{"level":"info","ts":1628697660.2980351,"caller":"mlog/log.go:237","msg":"Metrics and profiling server is started","address":"0.0.0.0:8067"}
+{"level":"debug","ts":1628697660.2982068,"caller":"app/product_notices.go:352","msg":"Will fetch notices from","url":"https://notices.mattermost.com/","skip_cache":false}
+{"level":"info","ts":1628697660.303593,"caller":"jobs/workers.go:135","msg":"Starting workers"}
+{"level":"debug","ts":1628697660.3036473,"caller":"sqlstore/session_store.go:283","msg":"Cleaning up session store."}
+{"level":"debug","ts":1628697660.3037894,"caller":"product_notices/worker.go:39","msg":"Worker started","worker":"ProductNotices"}
+{"level":"debug","ts":1628697660.3038085,"caller":"migrations/worker.go:44","msg":"Worker started","worker":"Migrations"}
+{"level":"debug","ts":1628697660.3038087,"caller":"mlog/log.go:230","msg":"Worker Started","workername":"EnterpriseLdapSync"}
+{"level":"debug","ts":1628697660.3038223,"caller":"scheduler/worker.go:36","msg":"Worker started","worker":"Plugins"}
+{"level":"debug","ts":1628697660.3038352,"caller":"expirynotify/worker.go:39","msg":"Worker started","worker":"ExpiryNotify"}
+{"level":"debug","ts":1628697660.3038483,"caller":"sqlstore/tokens_store.go:70","msg":"Cleaning up token store."}
+{"level":"debug","ts":1628697660.3038514,"caller":"active_users/worker.go:53","msg":"Worker started","worker":"ActiveUsers"}
+{"level":"debug","ts":1628697660.303823,"caller":"cloud/worker.go:56","msg":"Worker started","worker":"Cloud"}
+{"level":"debug","ts":1628697660.3038702,"caller":"jobs/jobs_watcher.go:38","msg":"Watcher Started"}
+{"level":"debug","ts":1628697660.3038738,"caller":"import_process/worker.go:61","msg":"Worker started","worker":"ImportProcess"}
+{"level":"info","ts":1628697660.303881,"caller":"jobs/schedulers.go:116","msg":"Starting schedulers."}
+{"level":"debug","ts":1628697660.3038888,"caller":"import_delete/worker.go:55","msg":"Worker started","worker":"ImportDelete"}
+{"level":"debug","ts":1628697660.3038971,"caller":"resend_invitation_email/worker.go:38","msg":"Worker started","worker":"ResendInvitationEmailJob"}
+{"level":"debug","ts":1628697660.3039021,"caller":"export_process/worker.go:53","msg":"Worker started","worker":"ExportProcess"}
+{"level":"debug","ts":1628697660.3039432,"caller":"export_delete/worker.go:53","msg":"Worker started","worker":"ExportDelete"}
+{"level":"debug","ts":1628697660.3039615,"caller":"sqlstore/command_webhook_store.go:106","msg":"Cleaning up command webhook store."}
+{"level":"debug","ts":1628697660.3074777,"caller":"app/server.go:946","msg":"Advanced logging metrics enabled"}
+{"level":"info","ts":1628697660.307498,"caller":"app/license.go:94","msg":"License key valid unlocking enterprise features."}
+{"level":"debug","ts":1628697660.307518,"caller":"app/server.go:1794","msg":"License is not past the grace period."}
+{"level":"debug","ts":1628697660.3075361,"caller":"app/server.go:1534","msg":"License is present, skip"}
+{"level":"debug","ts":1628697660.3217604,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"EnterpriseLdapSync","next_runtime":"2021-08-10 22:41:40 +0000 UTC"}
+{"level":"debug","ts":1628697660.3266435,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"MigrationsScheduler","next_runtime":"2021-08-11 16:02:00.326637103 +0000 UTC m=+60.979214912"}
+{"level":"debug","ts":1628697660.3318303,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"PluginsScheduler","next_runtime":"2021-08-12 16:01:00.331824118 +0000 UTC m=+86400.984401946"}
+{"level":"debug","ts":1628697660.3435228,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ExpiryNotifyScheduler","next_runtime":"2021-08-11 16:11:00.34351621 +0000 UTC m=+600.996094019"}
+{"level":"debug","ts":1628697660.3562067,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ActiveUsersScheduler","next_runtime":"2021-08-11 16:11:00.356200288 +0000 UTC m=+601.008778096"}
+{"level":"debug","ts":1628697660.3619697,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ProductNoticesScheduler","next_runtime":"2021-08-11 17:01:00.361963036 +0000 UTC m=+3601.014540845"}
+{"level":"debug","ts":1628697660.3669107,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ImportDeleteScheduler","next_runtime":"2021-08-12 16:01:00.366905 +0000 UTC m=+86401.019482811"}
+{"level":"debug","ts":1628697660.371709,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ExportDeleteScheduler","next_runtime":"2021-08-12 16:01:00.371703666 +0000 UTC m=+86401.024281475"}
+{"level":"debug","ts":1628697660.376305,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"EnterpriseDataRetention","next_runtime":"2021-08-12 02:00:00 +0000 UTC"}
+{"level":"debug","ts":1628697660.381647,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"EnterpriseMessageExport","next_runtime":"2021-08-12 01:00:00 +0000 UTC"}
+{"level":"debug","ts":1628697660.386604,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"EnterpriseElasticsearchAggregator","next_runtime":"2021-08-12 03:00:00 +0000 UTC"}
+{"level":"info","ts":1628697660.390735,"caller":"mlog/log.go:237","msg":"Starting up plugins"}
+{"level":"info","ts":1628697660.390779,"caller":"app/plugin.go:258","msg":"Syncing plugins from the file store"}
+{"level":"debug","ts":1628697660.3926578,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"EnterpriseLdapSync","next_runtime":"2021-08-10 22:41:40 +0000 UTC"}
+{"level":"debug","ts":1628697660.3974702,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"MigrationsScheduler","next_runtime":"2021-08-11 16:02:00.397463017 +0000 UTC m=+61.050040834"}
+{"level":"debug","ts":1628697660.4028609,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"PluginsScheduler","next_runtime":"2021-08-12 16:01:00.402854875 +0000 UTC m=+86401.055432703"}
+{"level":"debug","ts":1628697660.413716,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ExpiryNotifyScheduler","next_runtime":"2021-08-11 16:11:00.413709564 +0000 UTC m=+601.066287420"}
+{"level":"debug","ts":1628697660.4246643,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ActiveUsersScheduler","next_runtime":"2021-08-11 16:11:00.424657212 +0000 UTC m=+601.077235030"}
+---------START-HTTP---------
+GET /?delimiter=%2F&encoding-type=url&fetch-owner=true&list-type=2&prefix=plugins%2F HTTP/1.1
+Host: (redacted)
+User-Agent: MinIO (linux; amd64) minio-go/v7.0.10
+Authorization: AWS4-HMAC-SHA256 Credential=**REDACTED**/20210811/us-gov-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=**REDACTED**
+X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+X-Amz-Date: 20210811T160100Z
+Accept-Encoding: gzip
+
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/xml
+Date: Wed, 11 Aug 2021 16:01:01 GMT
+Server: AmazonS3
+X-Amz-Bucket-Region: us-gov-west-1
+X-Amz-Id-2: E0B0SjDBNkJFM9uidXyMIUFQOKxiV3XLwtmNxjNeYhe2pQ+c4tzmstU3h9S4HucDg4kjJlOazvM=
+X-Amz-Request-Id: N63WQJ2WJPX9METQ
+---------END-HTTP---------
+{"level":"debug","ts":1628697660.4262247,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-incident-collaboration-v1.14.3-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4262373,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-welcomebot-v1.2.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4262338,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-aws-SNS-v1.2.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4264283,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-zoom-v1.5.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4300416,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-autolink-v1.2.2-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4360933,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/focalboard-v0.7.3-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.441297,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-github-v2.0.1-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4513695,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-antivirus-v0.1.2-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4614573,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-jira-v2.4.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.471525,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-custom-attributes-v1.3.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4816067,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-nps-v1.1.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4916785,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-gitlab-v1.3.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.4932532,"caller":"app/plugin.go:907","msg":"Processing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-jenkins-v1.1.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697660.6127148,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ProductNoticesScheduler","next_runtime":"2021-08-11 17:01:00.612694917 +0000 UTC m=+3601.265272729"}
+{"level":"debug","ts":1628697660.873953,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"CloudScheduler","next_runtime":"2021-08-12 04:01:00.873938247 +0000 UTC m=+43201.526516061"}
+{"level":"debug","ts":1628697661.0651762,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ResendInvitationEmailJobScheduler","next_runtime":"2021-08-11 16:01:06.065161834 +0000 UTC m=+6.717739653"}
+{"level":"debug","ts":1628697661.3587134,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ImportDeleteScheduler","next_runtime":"2021-08-12 16:01:01.358696634 +0000 UTC m=+86402.011274450"}
+{"level":"debug","ts":1628697661.519948,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ExportDeleteScheduler","next_runtime":"2021-08-12 16:01:01.519933388 +0000 UTC m=+86402.172511201"}
+{"level":"debug","ts":1628697661.6217415,"caller":"app/plugin.go:937","msg":"Installing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-nps-v1.1.0-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697661.6920946,"caller":"plugin/hclog_adapter.go:52","msg":"starting plugin","plugin_id":"com.mattermost.nps","wrapped_extras":"pathplugins/com.mattermost.nps/server/dist/plugin-linux-amd64args[plugins/com.mattermost.nps/server/dist/plugin-linux-amd64]"}
+{"level":"debug","ts":1628697661.6923945,"caller":"plugin/hclog_adapter.go:52","msg":"plugin started","plugin_id":"com.mattermost.nps","wrapped_extras":"pathplugins/com.mattermost.nps/server/dist/plugin-linux-amd64pid17"}
+{"level":"debug","ts":1628697661.6924572,"caller":"plugin/hclog_adapter.go:52","msg":"waiting for RPC address","plugin_id":"com.mattermost.nps","wrapped_extras":"pathplugins/com.mattermost.nps/server/dist/plugin-linux-amd64"}
+{"level":"debug","ts":1628697661.701608,"caller":"plugin/hclog_adapter.go:52","msg":"plugin address","plugin_id":"com.mattermost.nps","wrapped_extras":"address/tmp/plugin347360596networkunixtimestamp2021-08-11T16:01:01.701Z"}
+{"level":"debug","ts":1628697661.701661,"caller":"plugin/hclog_adapter.go:52","msg":"using plugin","plugin_id":"com.mattermost.nps","wrapped_extras":"version1"}
+{"level":"debug","ts":1628697661.7108145,"caller":"mlog/sugar.go:17","msg":"Activating plugin","plugin_id":"com.mattermost.nps"}
+{"level":"info","ts":1628697661.7123,"caller":"mlog/sugar.go:21","msg":"Ensuring Surveybot exists","plugin_id":"com.mattermost.nps"}
+{"level":"debug","ts":1628697661.7197225,"caller":"mlog/sugar.go:17","msg":"Failed to create Surveybot. Attempting to find existing one.","plugin_id":"com.mattermost.nps","err":"CreateBot: An account with that username already exists., invalid input: entity: User field: username value: surveybot"}
+{"level":"debug","ts":1628697661.7222984,"caller":"app/plugin.go:937","msg":"Installing prepackaged plugin","path":"/mattermost/prepackaged_plugins/mattermost-plugin-incident-collaboration-v1.14.3-linux-amd64.tar.gz"}
+{"level":"debug","ts":1628697661.7277787,"caller":"mlog/sugar.go:17","msg":"Found Surveybot","plugin_id":"com.mattermost.nps"}
+{"level":"debug","ts":1628697661.7310965,"caller":"mlog/sugar.go:17","msg":"Plugin activated","plugin_id":"com.mattermost.nps"}
+{"level":"debug","ts":1628697661.8681479,"caller":"plugin/hclog_adapter.go:52","msg":"starting plugin","plugin_id":"com.mattermost.plugin-incident-management","wrapped_extras":"pathplugins/com.mattermost.plugin-incident-management/server/dist/plugin-linux-amd64args[plugins/com.mattermost.plugin-incident-management/server/dist/plugin-linux-amd64]"}
+{"level":"debug","ts":1628697661.8686402,"caller":"plugin/hclog_adapter.go:52","msg":"plugin started","plugin_id":"com.mattermost.plugin-incident-management","wrapped_extras":"pathplugins/com.mattermost.plugin-incident-management/server/dist/plugin-linux-amd64pid26"}
+{"level":"debug","ts":1628697661.8686783,"caller":"plugin/hclog_adapter.go:52","msg":"waiting for RPC address","plugin_id":"com.mattermost.plugin-incident-management","wrapped_extras":"pathplugins/com.mattermost.plugin-incident-management/server/dist/plugin-linux-amd64"}
+{"level":"debug","ts":1628697661.8814168,"caller":"plugin/hclog_adapter.go:52","msg":"plugin address","plugin_id":"com.mattermost.plugin-incident-management","wrapped_extras":"networkunixaddress/tmp/plugin890438826timestamp2021-08-11T16:01:01.881Z"}
+{"level":"debug","ts":1628697661.8814783,"caller":"plugin/hclog_adapter.go:52","msg":"using plugin","plugin_id":"com.mattermost.plugin-incident-management","wrapped_extras":"version1"}
+---------START-HTTP---------
+POST /users/ipckeuac5pg9zp3bk64oz6qwur/profile.png?uploads= HTTP/1.1
+Host: (redacted)
+User-Agent: MinIO (linux; amd64) minio-go/v7.0.10
+Content-Length: 0
+Authorization: AWS4-HMAC-SHA256 Credential=**REDACTED**/20210811/us-gov-west-1/s3/aws4_request, SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date;x-amz-server-side-encryption, Signature=**REDACTED**
+Content-Type: image/png
+X-Amz-Content-Sha256: UNSIGNED-PAYLOAD
+X-Amz-Date: 20210811T160101Z
+X-Amz-Server-Side-Encryption: AES256
+Accept-Encoding: gzip
+
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Date: Wed, 11 Aug 2021 16:01:02 GMT
+Server: AmazonS3
+X-Amz-Id-2: oE6oL86MDbFQ5qgW9HDunSzr7GE07yhKdp6WglUj2Aest7yCy1/UDs1yF6lJhBvKxQxQRF/qjow=
+X-Amz-Request-Id: 3M6FSRJNDPT4TXGC
+X-Amz-Server-Side-Encryption: AES256
+---------END-HTTP---------
+---------START-HTTP---------
+PUT /users/ipckeuac5pg9zp3bk64oz6qwur/profile.png?partNumber=1&uploadId=yLA_cJ9.POyp2mj0Oh1TVtQv3jhFlTJfA_EhfnpZiNjV0jqJT4niAZytIUSieU0fH0irSJiYiKMxlpe7jA_QzeLBAtuewpQpRhCftOMB2hvm41WVkOUYtdYrwOuEPpfQ HTTP/1.1
+Host: (redacted)
+User-Agent: MinIO (linux; amd64) minio-go/v7.0.10
+Content-Length: 4376
+Authorization: AWS4-HMAC-SHA256 Credential=**REDACTED**/20210811/us-gov-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=**REDACTED**
+X-Amz-Content-Sha256: UNSIGNED-PAYLOAD
+X-Amz-Date: 20210811T160101Z
+Accept-Encoding: gzip
+
+HTTP/1.1 200 OK
+Content-Length: 0
+Date: Wed, 11 Aug 2021 16:01:02 GMT
+Etag: "518ca5265922b4eb9f7a5f82bbddc07a"
+Server: AmazonS3
+X-Amz-Id-2: uKCnlpK504F+22SaHfGC2piUuvJ0+1UFWblCk+TtiN0c2WOvko46x8Tg7xiZ7rz8tLZud0xi8IM=
+X-Amz-Request-Id: 3M6DDKF3RSRJEGSP
+X-Amz-Server-Side-Encryption: AES256
+---------END-HTTP---------
+---------START-HTTP---------
+POST /users/ipckeuac5pg9zp3bk64oz6qwur/profile.png?uploadId=yLA_cJ9.POyp2mj0Oh1TVtQv3jhFlTJfA_EhfnpZiNjV0jqJT4niAZytIUSieU0fH0irSJiYiKMxlpe7jA_QzeLBAtuewpQpRhCftOMB2hvm41WVkOUYtdYrwOuEPpfQ HTTP/1.1
+Host: (redacted)
+User-Agent: MinIO (linux; amd64) minio-go/v7.0.10
+Content-Length: 231
+Authorization: AWS4-HMAC-SHA256 Credential=**REDACTED**/20210811/us-gov-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=**REDACTED**
+X-Amz-Content-Sha256: 42978211d5a450e32f56ec189e5f8a1280eedce0cb28e7d92979a69d9d9b22ce
+X-Amz-Date: 20210811T160101Z
+Accept-Encoding: gzip
+
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Content-Type: application/xml
+Date: Wed, 11 Aug 2021 16:01:02 GMT
+Server: AmazonS3
+X-Amz-Id-2: Mlx89jopQao3PekyjJUxS/+ACcbauCNJNhKGkHAq9xSm7kP92eINSQxsizYwO4skfh6/nDCDLbY=
+X-Amz-Request-Id: 3M6847EJSFKYRQHH
+X-Amz-Server-Side-Encryption: AES256
+---------END-HTTP---------
+{"level":"debug","ts":1628697662.0851283,"caller":"api4/plugin.go:28","msg":"EXPERIMENTAL: Initializing plugin api"}
+{"level":"debug","ts":1628697662.0863786,"caller":"web/web.go:26","msg":"Initializing web routes"}
+{"level":"debug","ts":1628697662.0867715,"caller":"utils/subpath.go:84","msg":"Rewriting static assets","from_subpath":"/","to_subpath":"/"}
+{"level":"debug","ts":1628697662.1129546,"caller":"web/static.go:30","msg":"Using client directory","clientDir":"/mattermost/client"}
+{"level":"info","ts":1628697662.1154969,"caller":"app/server.go:1179","msg":"Starting Server..."}
+{"level":"info","ts":1628697662.1155987,"caller":"app/server.go:1255","msg":"Server is listening on 0.0.0.0:8065","address":"0.0.0.0:8065"}
+{"level":"debug","ts":1628697662.115636,"caller":"app/server.go:889","msg":"Remote Cluster Service disabled via config"}
+{"level":"debug","ts":1628697662.4585345,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"nk6dpsfwg3y6drep6pfuiy3rth","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"error","ts":1628697666.7034812,"caller":"log/log.go:181","msg":"[ERR] plugin: plugin acceptAndServe error: timeout waiting for accept","source":"stdlog"}
+{"level":"debug","ts":1628697671.4725854,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"qcmyzoo3mprqzeap4kyyaji9fe","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697675.196116,"caller":"memberlist@v0.2.4/net.go:890","msg":" memberlist: Initiating push/pull sync with:  xxx.xxx.xxx.xxx:8074","source":"memberlist"}
+{"level":"info","ts":1628697675.1976461,"caller":"cluster/cluster.go:160","msg":"A node has joined the cluster","node":"chat-7dc456cd9c-ll25d"}
+{"level":"info","ts":1628697675.197714,"caller":"cluster/cluster.go:385","msg":"This node joined the cluster","joined_seeds":1,"total_seeds":1}
+{"level":"info","ts":1628697675.197736,"caller":"cluster/cluster.go:386","msg":"Cluster is reporting alive nodes","alive_nodes":2}
+{"level":"debug","ts":1628697675.655848,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/plugins/webapp","request_id":"gzsxihmh7jye3mbnsfjk6pcbfe","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697675.6759412,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/plugins/webapp","request_id":"cdado3rajfnz5xuxb6qxyiu31h","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697676.4725406,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"4g8b6jk1sbf1zxhyw6s5a5w86c","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697677.3872778,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"acfxq68an3nr7ruznn1xdcy44y","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697681.4725897,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"w3q8tw4mq381if4i81dueqf34r","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697686.472473,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"348de1cmgbg7mdje851shya39y","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697691.47257,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"5fkusphj3frejnq44fkjjgrcqe","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697693.766909,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"POST","url":"/api/v4/channels/members/me/view","request_id":"bycepc6totn5fq6sj6n67nwmkw","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697695.0846825,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/license/client","request_id":"713oddr3ib8rpmfzra3ti6xbmh","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697695.1183035,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/users/me/preferences","request_id":"bkh8n6fekfyh5y519b9cfj76ih","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697695.121131,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/users/me/teams/members","request_id":"qcjdbzriktbh9gppuqytbnhyhr","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697695.1358125,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"POST","url":"/api/v4/roles/names","request_id":"7efska1sqtgguempca8j51ny7y","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697695.2028866,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/plugins/webapp","request_id":"tun4mkeqebdajnxfrumu5gusxo","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697695.5584373,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"POST","url":"/api/v4/roles/names","request_id":"gagyqx8qoid6jxnxjnxqqd4ghc","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697695.6926825,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:47152","source":"memberlist"}
+{"level":"debug","ts":1628697695.693052,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/analytics/old","request_id":"nkkkxqsdc3bjzxbrzbpqn4ef7r","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697695.7244012,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"akirfktk678njyzdx85pkmatxw","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697696.4725041,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"h1csbazcw7fm9etc773npeazzc","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697701.472521,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"367hdxfjwbysxpy9dnm48mqz4o","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697706.4725475,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"p34k8myssjyrdgfyo3wjxypyma","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697711.4725924,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"zry63z861pbhipfm95wxkhuunr","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697713.4724495,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:47258","source":"memberlist"}
+{"level":"debug","ts":1628697716.4725575,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"wwkeey9ze3rbfnnkt5d4xudrsr","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697721.4725778,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"teqe3i5p378wp8jtb7iu8mxkiw","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697721.5268965,"caller":"ldap/ldap_sync_scheduler.go:66","msg":"Scheduling data retention job."}
+{"level":"debug","ts":1628697721.5335495,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"EnterpriseLdapSync","next_runtime":"2021-08-11 17:02:01.520156323 +0000 UTC m=+3662.172734523"}
+{"level":"debug","ts":1628697721.5383782,"caller":"migrations/scheduler.go:51","msg":"Scheduling Job","scheduler":"MigrationsScheduler"}
+{"level":"debug","ts":1628697721.54066,"caller":"migrations/scheduler.go:90","msg":"All migrations are complete.","scheduler":"MigrationsScheduler"}
+{"level":"debug","ts":1628697721.5431883,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"MigrationsScheduler","next_runtime":"<nil>"}
+{"level":"debug","ts":1628697722.019384,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"POST","url":"/api/v4/users/status/ids","request_id":"s9yeywt8epb95roxz9k1fkkwto","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697725.7679026,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"finyhimrqiyjzr8bg33jsoj4ao","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697726.4725232,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"3ufqnzgdqi86jxnriuugekmzho","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697731.4724796,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"f9hnn7yempns8ebqr3gnm1auba","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697736.4725742,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"7hhk9pxu1ifj5yktat3bc65u7y","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697740.138807,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/users/me/teams/1whdnkwsu3843g7gb4jakzwo1w/channels","request_id":"416drx1w7tbqbf8counib1jpka","host":"(redacted)","scheme":"https","status_code":"304"}
+{"level":"debug","ts":1628697740.2050068,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/channels/jxwtz46bt7nemcnw8p5cxos5ra/posts","request_id":"z8ti5isqhi8zfrg4hfck35pzwe","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697740.2605126,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"POST","url":"/api/v4/users/ids","request_id":"rikx4iiwgfn5xmyipp7fzt19xo","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697740.7865126,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"4qygjfn9u3njpj7p5u8knjsoto","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697741.4725146,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"w19qrb7r9j87zpshipyy4j4jsw","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697746.4725616,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"jryp51jjefrtfdmxm4sc49txfy","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697751.4725435,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"t513jcb8dt8t9gfdgn9gkr9jjo","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697756.4725873,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"17akrdoo73nftgw417ft4xxm6h","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"warn","ts":1628697756.5432515,"caller":"api4/config.go:353","msg":"Unrecognized config permissions tag value.","tag_value":"sysconsole_write_*_read"}
+{"level":"debug","ts":1628697756.5926273,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:47532","source":"memberlist"}
+{"level":"debug","ts":1628697756.6003573,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:47534","source":"memberlist"}
+{"level":"debug","ts":1628697756.600705,"caller":"jobs/workers.go:211","msg":"Workers received config change."}
+{"level":"debug","ts":1628697756.600827,"caller":"plugin/environment.go:514","msg":"Enabling plugin health check job","interval_s":30}
+{"level":"debug","ts":1628697756.6008458,"caller":"jobs/schedulers.go:234","msg":"Schedulers received config change."}
+{"level":"debug","ts":1628697756.6008604,"caller":"plugin/health_check.go:31","msg":"Plugin health check job starting."}
+{"level":"debug","ts":1628697756.6071892,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"EnterpriseLdapSync","next_runtime":"2021-08-10 22:41:40 +0000 UTC"}
+{"level":"debug","ts":1628697756.6118996,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"MigrationsScheduler","next_runtime":"<nil>"}
+{"level":"debug","ts":1628697756.616651,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"PluginsScheduler","next_runtime":"2021-08-12 16:02:36.616643187 +0000 UTC m=+86497.269221057"}
+{"level":"debug","ts":1628697756.6270692,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ExpiryNotifyScheduler","next_runtime":"2021-08-11 16:12:36.627060839 +0000 UTC m=+697.279639005"}
+{"level":"debug","ts":1628697756.6374674,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ActiveUsersScheduler","next_runtime":"2021-08-11 16:12:36.637460114 +0000 UTC m=+697.290037958"}
+{"level":"error","ts":1628697756.6379623,"caller":"app/enterprise.go:231","msg":"An error occurred while configuring SAML Service Provider","error":"Cannot load CertificateStore. No certificate block found"}
+{"level":"debug","ts":1628697756.643774,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ProductNoticesScheduler","next_runtime":"2021-08-11 17:02:36.643766784 +0000 UTC m=+3697.296344884"}
+{"level":"info","ts":1628697756.6449332,"caller":"sqlstore/post_store.go:2011","msg":"Post.Message has size restrictions","max_characters":16383,"max_bytes":65535}
+{"level":"debug","ts":1628697756.6486263,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ImportDeleteScheduler","next_runtime":"2021-08-12 16:02:36.648618383 +0000 UTC m=+86497.301196196"}
+{"level":"info","ts":1628697756.6493933,"caller":"metrics/metrics.go:885","msg":"Metrics endpoint is initiated","address":":8067"}
+{"level":"debug","ts":1628697756.6535413,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"ExportDeleteScheduler","next_runtime":"2021-08-12 16:02:36.653533376 +0000 UTC m=+86497.306111196"}
+{"level":"info","ts":1628697757.14958,"caller":"mlog/log.go:237","msg":"Metrics and profiling server is stopping"}
+{"level":"info","ts":1628697757.149906,"caller":"metrics/metrics.go:885","msg":"Metrics endpoint is initiated","address":":8067"}
+{"level":"info","ts":1628697757.1499925,"caller":"mlog/log.go:237","msg":"Metrics and profiling server is started","address":"0.0.0.0:8067"}
+{"level":"debug","ts":1628697757.1813562,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:47558","source":"memberlist"}
+{"level":"debug","ts":1628697757.192626,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:47562","source":"memberlist"}
+{"level":"debug","ts":1628697757.7038848,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:47582","source":"memberlist"}
+{"level":"debug","ts":1628697757.728729,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"PUT","url":"/api/v4/config","request_id":"83nc4kattf8hbj5hm3zzb4f98a","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697761.472605,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"1ye3nw4p7trtjqjbcewupoauyr","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697766.472546,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"t7couwnrjf8fjx6ngqrqzjyu7o","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697770.759294,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"479ukker4jf9jk6xxb1dr43eso","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697771.472521,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"x8ixzbrbsigwxdk7si69wdnxnr","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697773.4752576,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:47672","source":"memberlist"}
+{"level":"debug","ts":1628697773.7787132,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"7gm7maxi7ifkdgmimiz3yizumw","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697774.8110826,"caller":"memberlist@v0.2.4/net.go:890","msg":" memberlist: Initiating push/pull sync with: chat-7dc456cd9c-ll25d xxx.xxx.xxx.xxx:8074","source":"memberlist"}
+{"level":"debug","ts":1628697776.4725845,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"kptppqi9pfyduc61fjpk3tyway","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697781.4725661,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"y4q56qe8spgb3xkmc1snbr1raw","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697786.4725378,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"a1ajsq69yibp38z9qboh3pyo8e","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697788.684312,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"6fb3wh3rztgxiqyc8r73hqx8kc","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697791.4725187,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"deztr4c66bnptj4sffr1npr64o","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697796.4726157,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"ta3r8aqjk3g6dbsebpup75becr","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697800.7425303,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"smkx5gib4tnfpnmfe9ph9j1yoa","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697801.4725845,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"n86abnfw1pfsbd8z1jxr6eso1a","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697806.4725437,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"r3do838p63dwuku9yy7uqhfedc","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697811.4725456,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"6c5zpi5x8pdupjn8ep5kyhd6oh","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697816.4725907,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"zzsmtrw9n3dfdddd1o36prcqnw","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697816.6603286,"caller":"ldap/ldap_sync_scheduler.go:66","msg":"Scheduling data retention job."}
+{"level":"debug","ts":1628697816.6667948,"caller":"jobs/schedulers.go:216","msg":"Next run time for scheduler","scheduler_name":"EnterpriseLdapSync","next_runtime":"2021-08-11 17:03:36.653653707 +0000 UTC m=+3757.306231520"}
+{"level":"debug","ts":1628697821.2894123,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/groups/p48t3rre9ibd5bghp1x7cbhbiw/channels","request_id":"wdphw43ngp8cimh365dywnzexe","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697821.291874,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/groups/p48t3rre9ibd5bghp1x7cbhbiw/stats","request_id":"qm8zpsss87g59y35hk5734bpje","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697821.2970474,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/users","request_id":"eqexn1ccijnrbb94ui4jw35nqr","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697821.4725583,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"5s118uiqm3ncppr8wnmoa5695y","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697824.3097367,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/admin_console/authentication/ldap","request_id":"zftiu8ohutdujmt939pteobete","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697825.4350133,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/license/client","request_id":"iuhukinwfpbyf858hmxhio7dkc","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697825.4674773,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/users/me/preferences","request_id":"7hr9kbpfpf8kiptffercsor89o","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697825.4689584,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/users/me/teams/members","request_id":"9uub75ak7j87xke1ek347da6ma","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697825.4784546,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"POST","url":"/api/v4/roles/names","request_id":"jd9do6jyypgkxdw5dmmbiyfzxo","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697825.546056,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/plugins/webapp","request_id":"jbnhm7rm7bdrjjm88ehdrgaucr","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697825.9527516,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/config","request_id":"77z6j1h5d7bem8717whhfztn8o","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697826.0681412,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:48010","source":"memberlist"}
+{"level":"debug","ts":1628697826.068517,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/analytics/old","request_id":"k8f5bpwxofny9k7i84xix9168o","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697826.0949793,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"hddn8dej1fr8jkeb93x4p53yqw","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697826.4725327,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"j1gt3kirrt8ruf65t4kbaj87tw","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697831.4725935,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"yke44dmghbn3zk5weeex5ium3a","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697833.4782858,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:48088","source":"memberlist"}
+{"level":"debug","ts":1628697834.8139443,"caller":"memberlist@v0.2.4/net.go:890","msg":" memberlist: Initiating push/pull sync with: chat-7dc456cd9c-ll25d xxx.xxx.xxx.xxx:8074","source":"memberlist"}
+{"level":"debug","ts":1628697836.472547,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"x7ozrfitbt8i5f1dm5dcqmp4ho","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697841.4725192,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"48j868bnf7yupj9k8s8m75cpre","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697842.0172558,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"POST","url":"/api/v4/users/status/ids","request_id":"e584r5uqyjddb8ma5skaqu7tsh","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697846.472573,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"byhiurrkfty7bmsubdr4zu1zze","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697851.47254,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"er5zxxm3jfrixnrn4x78xwfa5e","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697856.1198838,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"ghijfoexofbzjr4y7chqaq8ube","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697856.472556,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"mi5myaa1htbr5gwz5aobr6ntze","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697861.472406,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"55pt1d6hw7ddujubdjwjty7euw","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697866.4725547,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"9ywxny6r6jddxgmady76se1nah","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697871.472526,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"x8g7o5tpatf78e39tguyeerrge","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697876.4725194,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"7w5ajaz9pj8x9nocryr51xffsc","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697881.472518,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"4f7ofrp1wt86fyc4kb95kfmu4e","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697886.299114,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"bqpb7yccfi88jpw8bq9c6qe4oy","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697886.4725716,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"sr31p67mrtdoiq5ifdgapc851y","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697891.47259,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"ukzx1tju4ir7fbop6ptxm3ayso","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697893.4809422,"caller":"memberlist@v0.2.4/net.go:224","msg":" memberlist: Stream connection from=xxx.xxx.xxx.xxx:48482","source":"memberlist"}
+{"level":"debug","ts":1628697894.8167458,"caller":"memberlist@v0.2.4/net.go:890","msg":" memberlist: Initiating push/pull sync with: chat-7dc456cd9c-ll25d xxx.xxx.xxx.xxx:8074","source":"memberlist"}
+{"level":"debug","ts":1628697896.4725373,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"kkw5s9z5fjbzxjja74gyb5rwqw","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697901.4725313,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"8z5nxpnt9iyh5gomycqgbc5oqy","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697906.4725022,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"upremi9b9tby9giq7zoicq9eia","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697908.6839821,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"3gyicttksjdumdhk4imgugh8ja","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697911.4725804,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"b8d37a37y3b1my93embhdo1zyy","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697916.1101122,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"xg7sxh8uupfytci8ap3dd4j19e","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697916.4725716,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"ppcsu3usdbr8tb8j4issrh5dre","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697921.4725306,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"4ubuymch5frjpyf567msdet44a","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697926.47257,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"rdb4famz7jg89e3n433kkiwode","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697931.4726164,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"jr4t3goibifc7cznqxdip68b1c","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697936.4725766,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"a8k3nofp57d37pktpojawz9j3r","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697941.472534,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"9dkagetqk7gdxkps1nojou3wga","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}
+{"level":"debug","ts":1628697946.1226504,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/jobs/type/ldap_sync","request_id":"yxp196goejbr5rieprwpogdbpr","host":"(redacted)","scheme":"https","status_code":"200"}
+{"level":"debug","ts":1628697946.4725573,"caller":"web/handlers.go:107","msg":"Received HTTP request","method":"GET","url":"/api/v4/system/ping","request_id":"4eq54q4xq3y33cj6trn7jg4k7r","host":"xxx.xxx.xxx.xxx:8065","scheme":"","status_code":"200"}

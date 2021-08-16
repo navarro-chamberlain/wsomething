@@ -1,0 +1,149 @@
+# Chart values
+sonarqube:
+  postgresql:
+    postgresqlUsername: postgresql
+    postgresqlPassword: postgresql
+    postgresqlDatabase: sonarqube
+    postgresqlPort: 5432
+  sonarqubeUsername: admin
+  sonarqubePassword: admin
+  initimage:
+    url: docker.io/bitnami/minideb:latest
+  image:
+    url: docker.io/bitnami/sonarqube:latest
+  serviceAccount:
+    ## This needs to be enabled when we move to using the PSP admission controller.
+    enabled: false #true
+    ## If this name is changed, it also needs to be changed in the
+    ## `postgresql.serviceAccount.name` section below
+    # name: sonarqube-psp
+  storage:
+    size: 4Gi
+  configmap:
+    enabled: false
+  postStart:
+    enabled: true
+  virtualService:
+    enabled: false
+    # host: sonarqube.example.com
+
+# Subchart values
+postgresql:
+  global:
+    postgresql: {}
+
+  ## Bitnami PostgreSQL image version
+  image:
+    registry: docker.io
+    repository: bitnami/postgresql
+    tag: latest
+    pullPolicy: IfNotPresent
+    debug: false
+
+  ## Init containers parameters:
+  ## volumePermissions: Change the owner of the persist volume mountpoint to RunAsUser:fsGroup
+  volumePermissions:
+    enabled: true
+    image:
+      registry: docker.io
+      repository: bitnami/minideb
+      tag: latest
+      pullPolicy: Always
+    securityContext:
+      runAsUser: 0
+
+  securityContext:
+    enabled: true
+    fsGroup: 1001
+    runAsUser: 1001
+
+  serviceAccount:
+    ## This needs to be enabled when we move to using the PSP admission controller.
+    enabled: false #true
+    # name: sonarqube-psp
+
+  replication:
+    enabled: false
+
+  postgresqlUsername: postgresql
+  postgresqlPassword: postgresql
+
+  postgresqlDatabase: "sonarqube"
+  postgresqlDataDir: /bitnami/postgresql/data
+  extraEnv: []
+
+  ## LDAP configuration
+  ldap:
+    enabled: false
+
+  ## PostgreSQL service configuration
+  service:
+    type: ClusterIP
+    port: 5432
+    annotations: {}
+
+  # Settings for mem volume
+  shmVolume:
+    enabled: true
+    chmod:
+      enabled: true
+
+  # Settings for persistent volume claim
+  persistence:
+    enabled: false
+    # existingClaim: bitnami-postgresql-postgresql
+    mountPath: /bitnami/postgresql/data
+    subPath: ""
+    storageClass: ""
+    accessModes:
+      - ReadWriteOnce
+    size: 8Gi
+    annotations: {}
+
+  updateStrategy:
+    type: RollingUpdate
+
+
+  ## PostgreSQL Master parameters
+  master:
+    nodeSelector: {}
+    affinity: {}
+    tolerations: []
+    labels: {}
+    annotations: {}
+    podLabels: {}
+    podAnnotations: {}
+    priorityClassName: ""
+    extraInitContainers: []
+    extraVolumeMounts: []
+    extraVolumes: []
+    sidecars: []
+
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 250m
+
+  networkPolicy:
+    enabled: false
+    allowExternal: true
+    explicitNamespacesSelector: {}
+
+  livenessProbe:
+    enabled: true
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 6
+    successThreshold: 1
+
+  readinessProbe:
+    enabled: true
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 6
+    successThreshold: 1
+
+  metrics:
+    enabled: false
